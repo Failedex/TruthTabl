@@ -24,14 +24,13 @@ logic: (!p>q)|(!p&!q)
 ## Syntax/Usage
 Operators | Syntax | Priority
 --- | --- | ---
-not | `!` | 1
+negation | `!` | 1
 and | `&` | 2
 or | `\|` | 3
 implies | `>` | 4
+biconditional | `=` | 5
 
 Operators with the lowest priority is evaluated first, but parenthesis could be used to prioritize certain operations (see examples).
-
-I forgot to implement biconditional. Let me think about the syntax first.
 
 To quit the program, you can input "!!!", but you can also `<C-c>`. This is just the average python script.
 

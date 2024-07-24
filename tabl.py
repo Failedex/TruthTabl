@@ -20,12 +20,13 @@ class Statement:
         # special characters ranked in order of importance
         special = { 
             "!": 1,
-            "^": 2,
+            "^": 2, # hehe xor
             "&": 3, 
             "|": 4, 
             ">": 5, 
-            "(": 6, 
-            ")": 6
+            "=": 6,
+            "(": 7, # ( should be a special char, but nothing should force it to evaluate except for ).
+            ")": 7
         }
         operations = deque()
         polish = ""
@@ -68,6 +69,7 @@ class Statement:
             "|": lambda a, b: a or b,
             ">": lambda a, b: (not a) or b,
             "^": lambda a, b: a != b,
+            "=": lambda a, b: a == b,
         }
         vals = deque()
         valsvar = deque()
