@@ -1,8 +1,8 @@
 # Truth Tabl Generator!!!
 
-*"We had to draw so many truth tables in the tutorials." - Chair-and-Table*
+A Python script that generates propositional logic tables (truth tables). Made for my Discrete Mathematics course because I'm too lazy to make these by hand.
 
-Python script that generates propositional logic tables (truth tables). Made for my Discrete Mathematics course because I'm too lazy to make these by hand.
+*"We had to draw so many truth tables in the tutorials. It's so annoying." - Chair-and-Table*
 
 ## Example
 ```
@@ -25,9 +25,9 @@ logic: (!p>q)|(!p&!q)
 Operators | Syntax | Priority
 --- | --- | ---
 not | `!` | 1
-and | `&` | 3
-or | `|` | 4
-implies | `>` | 5
+and | `&` | 2
+or | `|` | 3
+implies | `>` | 4
 
 Operators with the lowest priority is evaluated first, but parenthesis could be used to prioritize certain operations (see examples).
 
