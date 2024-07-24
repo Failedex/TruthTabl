@@ -26,7 +26,7 @@ Operators | Syntax | Priority
 --- | --- | ---
 not | `!` | 1
 and | `&` | 2
-or | `|` | 3
+or | `\|` | 3
 implies | `>` | 4
 
 Operators with the lowest priority is evaluated first, but parenthesis could be used to prioritize certain operations (see examples).
