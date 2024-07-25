@@ -133,23 +133,36 @@ class Printer():
         """
         Print the heading!!!
         """
+        print("|", end="")
         for state in self.order:
-            print(f"{state:^{len(state)+2}}", end="")
+            print(f"{state:^{len(state)+2}}", end="|")
         print()
+
+    def _print_br(self):
+        """
+        Print a break between values!!!
+        """
+        length = 1
+        for state in self.order:
+            length += len(state)+3
+        print("+"+"-"*(length-2)+"+")
 
     def _print_row(self, values:dict): 
         """
         Print a row (given the values for that row)!!!
         """
+        print("|", end="")
         for state in self.order:
-            print(f"{values[state]:^{len(state)+2}}", end="")
+            print(f"{values[state]:^{len(state)+2}}", end="|")
         print()
 
     def _print_table(self):
         """
         Print the table!!!
         """
+        self._print_br()
         self._print_head()
+        self._print_br()
         for i in range(2**len(self.prims)):
             state = {}
             for p in self.prims[::-1]:
@@ -162,7 +175,7 @@ class Printer():
                 raise Exception("Input is not syntatically valid.")
                 return
             self._print_row(state)
-
+        self._print_br()
 
 def main():
     logic = input("logic: ")
